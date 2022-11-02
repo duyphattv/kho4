@@ -100,7 +100,20 @@ void tinhtich(int a[10], int n)
 
   printf("\n, Tong cac so nguyen to trng mang la:",snt);
 }
+void nhapx(int a[10],int n)
+{
+	printf("\n,Nhap gia tri x ");
+	 scanf("%d", &n);
+	 printf("\n Vi tri cua x trong mang la: \n");
+	for(int i = 0; i<n; i++)
+    {
+        if(a[i]==n)
+        {
+            printf("%d \t",i);
+        }
+    }
 	
+}	
     
 
 
