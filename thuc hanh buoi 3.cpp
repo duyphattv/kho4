@@ -6,6 +6,8 @@ void tinhtich(int a[10], int n);
 void ktsnt(int a[10], int n);
 void insonguyento(int a[10], int n);
 void tinhtong(int a[10], int n);
+void nhapx(int a[10],int n);
+void tangdan(int a[10],int n);
 int main()
 {
 int a[10], n;
@@ -18,6 +20,8 @@ tinhtich(a,n);
 ktsnt(a,n);
 insonguyento(a,n);
 tinhtong(a,n);
+nhapx(a,n);
+tangdan(a,n);
 return 0; 
 }
 
@@ -98,9 +102,9 @@ void tinhtich(int a[10], int n)
 
   }
 
-  printf("\n, Tong cac so nguyen to trng mang la:",snt);
+  printf("\n, Tong cac so nguyen to trng mang la: %d \n",snt);
 }
-void nhapx(int a[10],int n)
+   void nhapx(int a[10],int n)
 {
 	printf("\n,Nhap gia tri x ");
 	 scanf("%d", &n);
@@ -113,8 +117,30 @@ void nhapx(int a[10],int n)
         }
     }
 	
-}	
-    
+}
+   void tangdan(int a[10],int n)
+ {
+   int tg;
+
+	for(int i=0;i<n-1;i++){
+	for(int j=i+1;j<n;j++){
+	
+	if(a[i]>a[j]){
+		tg=a[i];
+		a[i]=a[j];
+		a[j]=a[i];
+
+		
+	}
+	
+  }
+}
+   printf("\nMang da sap xep la: ");	 
+   for(int i=0;i<n;i++){
+   printf("%5d",a[i]);
+   
+}
+}
 
 
 
